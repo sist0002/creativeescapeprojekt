@@ -1,0 +1,31 @@
+---
+import Headerlogo from "../assets/logo_mark.svg";
+import Headermenu from "../assets/Burger menu.svg";
+import Headersearch from "../assets/Search.svg";
+---
+
+<header>
+  <div>
+    <Headerlogo />
+    <Headermenu class="burgermenu" />
+  </div>
+  <Headersearch />
+</header>
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: 10px 70px 10px 30px;
+    margin: auto;
+    align-items: center;
+    div {
+      display: flex;
+      gap: 30px;
+    }
+    .burgermenu {
+      margin: auto;
+      align-items: center;
+    }
+  }
+</style>
