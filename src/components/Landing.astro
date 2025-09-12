@@ -1,0 +1,21 @@
+---
+import Landingarticle from "../components/Landingarticle.astro";
+---
+
+<section>
+  <Landingarticle class="griditem" />
+  <div class="griditem"></div>
+</section>
+
+<style>
+  section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    margin: 50px 100px 50px 100px;
+  }
+  .griditem {
+    background-color: blueviolet;
+    height: 70vh;
+  }
+</style>
