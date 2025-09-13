@@ -1,0 +1,15 @@
+---
+import {Image} from "astro:assets";
+const {bannerImage, imageAltText} = Astro.props;
+---
+
+<div class="image-container"><Image src={bannerImage} alt={imageAltText} /></div>
+
+<style>
+  .image-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+  }
+</style>

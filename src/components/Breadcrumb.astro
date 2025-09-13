@@ -1,0 +1,30 @@
+---
+const {breadcrumbTitle, breadcrumbLink} = Astro.props;
+---
+
+<li><a href={breadcrumbLink}>{breadcrumbTitle}</a></li>
+
+<style>
+  li {
+    display: inline;
+    text-decoration: none;
+    font-family: "PoppinsLights", sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #000000;
+  }
+
+  li a {
+    text-decoration: none;
+    color: #000000;
+  }
+
+  li + li::before {
+    content: " > ";
+    padding: 0 10px;
+  }
+
+  li a:hover {
+    text-decoration: underline;
+  }
+</style>

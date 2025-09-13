@@ -1,0 +1,70 @@
+---
+import {Image} from "astro:assets";
+const {
+  cardImage1,
+  cardImage2,
+  imageAltText1,
+  imageAltText2,
+  cardHeadline1,
+  cardHeadline2,
+  cardLink1,
+  cardLink2,
+} = Astro.props;
+---
+
+<div class="twoCardsContainer">
+  <div class="twoCards">
+    <a href={cardLink1}><Image src={cardImage1} alt={imageAltText1} /></a>
+    <h5>Free activities</h5>
+    <a href={cardLink1}><h4>{cardHeadline1}</h4></a>
+  </div>
+
+  <div class="twoCards">
+    <a href={cardLink2}><Image src={cardImage2} alt={imageAltText2} /></a>
+    <h5>Upcoming</h5>
+    <a href={cardLink2}><h4>{cardHeadline2}</h4></a>
+  </div>
+</div>
+
+<style is:global>
+  .twoCardsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .twoCards {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .twoCards img {
+    width: 657px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .twoCards h5 {
+    font-family: "PoppinsLight", sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    text-align: center;
+    margin: 15px auto 0;
+    max-width: 450px;
+  }
+
+  .twoCards h4 {
+    font-family: "PoppinsMedium", sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
+    text-align: center;
+    margin: 15px auto;
+    max-width: 450px;
+  }
+
+  .twoCards a {
+    text-decoration: none;
+    color: inherit;
+  }
+</style>
