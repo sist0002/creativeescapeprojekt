@@ -1,0 +1,19 @@
+---
+const {linkText, linkUrl} = Astro.props
+
+---
+<p><a href={linkUrl}>{linkText}</a></p>
+
+<style>
+a{ 
+  text-align: center;
+    padding: 0 22%;
+    font-family: "PoppinsBold", sans-serif;
+    font-size: 15px;
+    display: block;       
+    text-align: center;     
+    text-decoration: none;  
+    color: inherit;          
+    margin: 1rem 0;          
+}
+</style>
