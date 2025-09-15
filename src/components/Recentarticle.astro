@@ -1,0 +1,50 @@
+---
+import { Image } from "astro:assets";
+import Landingimage from "../assets/photobooth.png";
+---
+
+<section class="grid_1-3">
+  <Image class="landingimg" src={Landingimage} alt="Photobooth in Berlin" />
+  <div class="recentarticle_flex">
+    <p class="recent_header">What is K7 Week?</p>
+    <p class="recent_date">10/9-2025</p>
+  </div>
+</section>
+<hr />
+<style>
+  .grid_1-3 {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    height: 100px;
+    column-gap: 10px;
+    margin-bottom: 15px;
+  }
+  .recentarticle_flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+  }
+  .recent_header,
+  .recent_date {
+    margin: 0;
+    font-family: sans-serif;
+  }
+  .recent_date {
+    color: #bcbcbc;
+    font-size: 11px;
+  }
+  .recent_header {
+    margin-top: 10px;
+    font-size: 15px;
+  }
+  hr {
+    border: 0.5px solid #bcbcbc;
+    margin-bottom: 20px;
+  }
+  .landingimg {
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+  }
+</style>

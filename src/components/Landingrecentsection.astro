@@ -1,0 +1,32 @@
+---
+import Recentarticle from "./Recentarticle.astro";
+---
+
+<div>
+  <div class="recent_header">
+    <p class="bold_theme_header">NEWS</p>
+    <hr />
+    <h2>RECENT ARTICLES</h2>
+  </div>
+  <section class="articlesection">
+    <Recentarticle />
+    <Recentarticle />
+    <Recentarticle />
+    <Recentarticle />
+  </section>
+</div>
+
+<style>
+  .recent_header {
+    height: 100px;
+    font-family: sans-serif;
+  }
+  hr {
+    border: 0.5px solid #bcbcbc;
+    margin-bottom: 20px;
+  }
+  .bold_theme_header {
+    font-size: 10px;
+    font-weight: bold;
+  }
+</style>
