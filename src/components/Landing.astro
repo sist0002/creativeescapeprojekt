@@ -1,10 +1,11 @@
 ---
 import Landingarticle from "../components/Landingarticle.astro";
+import Landingrecentsection from "../components/Landingrecentsection.astro";
 ---
 
 <section>
   <Landingarticle class="griditem" />
-  <div class="griditem"></div>
+  <Landingrecentsection class="griditem" />
 </section>
 
 <style>
@@ -12,7 +13,7 @@ import Landingarticle from "../components/Landingarticle.astro";
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 50px;
-    margin: 50px 100px 50px 100px;
+    margin: 50px 200px 50px 100px;
   }
   .griditem {
     background-color: blueviolet;
