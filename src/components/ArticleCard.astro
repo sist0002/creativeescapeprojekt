@@ -1,0 +1,64 @@
+---
+import Tag from "./Tag.astro";
+/* Props
+- title: kortets titel
+- href: link til fuld artikel/side
+- imgSrc, imgAlt: billede
+- tags: array af strings (valgfri)
+*/
+const { title, href = "#", imgSrc = "", imgAlt = title, tags = [] } = Astro.props;
+---
+<a class="card" href={href}>
+<div class="imgwrap">
+{imgSrc ? (
+<img src={imgSrc} alt={imgAlt} loading="lazy" />
+) : (
+<div class="placeholder" aria-hidden="true">Img</div>
+)}
+</div>
+<h3 class="cardTitle">{title}</h3>
+{tags?.length ? (
+<div class="tags">
+{tags.map((t:any) => <Tag label={t} />)}
+</div>
+) : null}
+</a>
+
+
+<style>
+.card {
+display: grid;
+gap: 10px;
+text-decoration: none;
+color: inherit;
+transition: transform .15s ease;
+}
+.card:hover { transform: translateY(-2px); }
+
+
+.imgwrap {
+aspect-ratio: 16/9;
+background: #e8e8e8;
+overflow: hidden;
+display: grid;
+place-items: center;
+}
+.imgwrap img {
+width: 100%; height: 100%; object-fit: cover; display: block;
+}
+.placeholder { opacity: .5; font: 600 14px/1.2 system-ui, sans-serif; }
+
+
+.cardTitle {
+font: 700 clamp(14px, 2vw, 18px)/1.3 system-ui, sans-serif;
+margin: 0;
+}
+.tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 0;       /* <- sørger for ingen margin */
+    padding: 0;      /* <- ingen padding */
+    line-height: 1;  /* <- ens højde */
+  }
+</style>

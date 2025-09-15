@@ -1,0 +1,23 @@
+---
+// Props: label (tekst)
+const { label } = Astro.props;
+---
+<span class="tag">{label}</span>
+
+
+<style>
+    .tag {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 0;
+      background: #fff;
+      color: #000;
+      border: 1px solid #000;
+      font: 600 11px/1 system-ui, sans-serif;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      margin: 0;          /* <- vigtigt */
+      line-height: 1;     /* <- sikrer ingen ekstra luft */
+    }
+  </style>

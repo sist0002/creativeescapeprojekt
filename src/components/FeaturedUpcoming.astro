@@ -1,0 +1,19 @@
+---
+import SectionHeader from "./SectionHeader.astro";
+import CardGrid from "./CardGrid.astro";
+
+const {
+  eyebrow = "FEATURED ARTICLES",
+  headline = "UPCOMING",
+  items = [],
+  bg = "#d4552a",
+} = Astro.props;
+---
+<section class="wrap" style={`--bg:${bg}`}>
+  <SectionHeader eyebrow={eyebrow} headline={headline} />
+  <CardGrid items={items.slice(0, 3)} />
+</section>
+
+<style>
+  .wrap{padding:48px 24px;background:var(--bg);color:#fff}
+</style>

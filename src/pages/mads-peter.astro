@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+import FeaturedUpcoming from "../components/FeaturedUpcoming.astro";
+
+
+// Dummy data – byt billeder/links ud til rigtige assets og routes
+const items = [
+{
+title: "Happening in Berlin tralalalalala – September 2025",
+href: "/haus-schwarzenberg",
+imgSrc: "/assets/hausschwarzenberg-banner.jpg",
+imgAlt: "Haus Schwarzenberg stairwell",
+tags: ["BERLIN"],
+},
+{
+title: "Street Art walk in Copenhagen through the eyes of a digital designer",
+href: "/event-cph-street-art",
+imgSrc: "/assets/placeholder1.jpg",
+imgAlt: "Event in Copenhagen",
+tags: ["FREE", "COPENHAGEN"],
+},
+{
+title: "Street Art walk in Berlin through the eyes of a digital designer",
+href: "/event-berlin-street-art",
+imgSrc: "/assets/placeholder2.jpg",
+imgAlt: "Event in Berlin",
+tags: ["BERLIN"],
+},
+];
+---
+<Layout title="Mads-Peter – Featured">
+<FeaturedUpcoming eyebrow="FEATURED ARTICLES" headline="UPCOMING" items={items} bg="#d4552a" />
+</Layout>
