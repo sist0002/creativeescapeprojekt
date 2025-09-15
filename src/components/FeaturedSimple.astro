@@ -1,0 +1,45 @@
+---
+import SectionHeader from "./SectionHeader.astro";
+import CardGrid from "./CardGrid.astro";
+
+const {
+  headline = "NOT THIS --> BUT THAT",
+  items = [],
+  bg = "#6a4fc1",  // lilla standard
+  color = "#fff",
+} = Astro.props;
+---
+<section class="wrap" style={`--bg:${bg}; --color:${color}`}>
+  <!-- Her bruger vi KUN h2 -->
+  <div class="head">
+    <div class="rule"></div>
+    <h2 class="headline">{headline}</h2>
+  </div>
+  <CardGrid items={items} cols={3} />
+</section>
+
+<style>
+  .wrap {
+    padding: 48px 24px;
+    background: var(--bg);
+    color: var(--color);
+  }
+
+  .head {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0 auto 28px;
+    max-width: 1200px;
+  }
+  .rule {
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+    opacity: .5;
+  }
+  .headline {
+    font: 800 clamp(28px, 4vw, 44px)/1.1 system-ui, sans-serif;
+    margin: 0;
+  }
+</style>

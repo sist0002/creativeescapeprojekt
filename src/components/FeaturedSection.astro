@@ -1,0 +1,42 @@
+---
+import SectionHeader from "./SectionHeader.astro";
+import CardGrid from "./CardGrid.astro";
+
+interface Item {
+  title: string;
+  href?: string;
+  imgSrc?: string;
+  imgAlt?: string;
+  tags?: string[];
+}
+
+interface Props {
+  eyebrow?: string;
+  headline?: string;
+  items?: Item[];
+  bg?: string;      // baggrund
+  color?: string;   // tekstfarve (styrer også divider via currentColor)
+  cols?: number;    // antal kolonner på desktop
+}
+
+const {
+  eyebrow = "FEATURED ARTICLES",
+  headline = "FREE ACTIVITIES IN BERLIN",
+  items = [],
+  bg = "#fff",
+  color = "#111",
+  cols = 4,
+}: Props = Astro.props;
+---
+<section class="wrap" style={`--bg:${bg}; --color:${color}`}>
+  <SectionHeader eyebrow={eyebrow} headline={headline} />
+  <CardGrid items={items} cols={cols} />
+</section>
+
+<style>
+  .wrap {
+    padding: 48px 24px;
+    background: var(--bg);
+    color: var(--color);
+  }
+</style>

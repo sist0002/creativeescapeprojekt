@@ -1,0 +1,21 @@
+---
+const { bg = "#000", color = "#fff", maxWidth = "1200px" } = Astro.props;
+---
+<section class="wrap" style={`--bg:${bg}; --color:${color}; --max:${maxWidth}`}>
+  <div class="inner">
+    <!-- Ingen indhold -->
+  </div>
+</section>
+
+<style>
+  .wrap {
+    padding: 48px 24px;       /* samme som de andre sektioner */
+    background: var(--bg);
+    color: var(--color);
+  }
+
+  .inner {
+    max-width: var(--max);
+    margin: 0 auto;
+  }
+</style>

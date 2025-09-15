@@ -1,24 +1,37 @@
 ---
 import ArticleCard from "./ArticleCard.astro";
-// Props: items = [{ title, href, imgSrc, imgAlt, tags }]
-const { items = [] } = Astro.props;
+
+type Item = {
+  title: string;
+  href?: string;
+  imgSrc?: string;
+  imgAlt?: string;
+  tags?: string[];
+};
+
+interface Props {
+  items: Item[];
+  cols?: number; // antal kolonner på desktop
+}
+
+const { items = [], cols = 3 }: Props = Astro.props;
 ---
-<div class="grid">
-    {items.map((it: any) => (
-        <ArticleCard {...it} />
-      ))}
+<div class="grid" style={`--cols:${cols}`}>
+  {items.map((it) => <ArticleCard {...it} />)}
 </div>
 
-
 <style>
-.grid {
-max-width: 1200px;
-margin: 24px auto 0;
-display: grid;
-gap: 28px;
-grid-template-columns: 1fr;
-}
-@media (min-width: 800px) {
-.grid { grid-template-columns: repeat(3, 1fr); }
-}
+  .grid {
+    max-width: 1200px;
+    margin: 24px auto 0;
+    display: grid;
+    gap: 28px;
+    grid-template-columns: 1fr;            /* mobil */
+  }
+  @media (min-width: 700px) {
+    .grid { grid-template-columns: repeat(2, 1fr); }  /* tablet */
+  }
+  @media (min-width: 1024px) {
+    .grid { grid-template-columns: repeat(var(--cols), 1fr); } /* desktop */
+  }
 </style>
