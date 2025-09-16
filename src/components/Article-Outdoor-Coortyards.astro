@@ -4,10 +4,7 @@ import ArticleH2 from "./ArticleH2.astro";
 import ArticleH3 from "./ArticleH3.astro";
 import ArticleParagraph from "./ArticleParagraph.astro";
 import ArticleBanner from "./ArticleBanner.astro";
-import HSbanner from "../assets/hausschwarzenberg-banner.jpg";
-import ArticleImage from "./ArticleImage.astro";
-import HSimage from "../assets/hausschwarzenberg-image.webp";
-import Gap from "./Gap.astro";
+import CourtyardBanner from "../assets/courtyard.jpeg";
 import GapBig from "./GapBig.astro";
 import TwoCardsMenu from "./TwoCardsMenu.astro";
 import PlaceholderImg1 from "../assets/placeholderimg1.png";
@@ -17,34 +14,39 @@ import PlaceholderImg2 from "../assets/placeholderimg1.png";
 <ArticleH1 articleH1Text="NOT POTSDAMMERPLATZ BUT OUTDOOR COURTYARDS" />
 
 <ArticleH2
-  articleH2Text="Discover Berlin's Outdoor Courtyard Scenes
-Berlin's courtyards are little microcosms of the city's creative, layered personality"
+  articleH2Text={`Discover Berlin's Outdoor Courtyard Scenes
+Berlin's courtyards are little microcosms of the city's creative, layered personality.`}
 />
 
-<ArticleBanner bannerImage={HSbanner} imageAltText="Haus Schwarzenberg banner" />
+<ArticleBanner bannerImage={CourtyardBanner} imageAltText="Outdoor Courtyard Berlin" />
 
-<ArticleH3 articleH3Text="Skip the crowded plazas and step into these dynamic, off-the-beaten-path urban oases where art, history and culture collide."/>
-
-<ArticleParagraph
-  articlePText="Here is a list of galleries you wouldnt want to miss!Hackesche Höfe
-This iconic complex of eight interconnected courtyards in Mitte is a treasure trove of Jugendstil architecture, galleries, indie boutiques, theaters, cafés, and more.  Wander through the arched façades and decorative tiles (courtesy of August Endell), and you'll find yourself in a living, breathing art installation at every turn."
+<ArticleH3
+  articleH3Text={`Skip the crowded plazas and step into these dynamic, off-the-beaten-path urban oases where art, history and culture collide.`}
 />
 
 <ArticleParagraph
-  articlePText=""
+  articlePText={`Here is a list of galleries you wouldn't want to miss!
+  
+1. Hackesche Höfe  
+This iconic complex of eight interconnected courtyards in Mitte is a treasure trove of Jugendstil architecture, galleries, indie boutiques, theaters, cafés, and more. Wander through the arched façades and decorative tiles (courtesy of August Endell), and you'll find yourself in a living, breathing art installation at every turn.`}
 />
 
-<Gap />
-
-<ArticleImage articleImage={HSimage} imageAltText="Haus Schwarzenberg image" />
-
-<ArticleH3 articleH3Text="What can you expect when visiting Haus Schwarzenberg?" />
-
 <ArticleParagraph
-  articlePText=""
+  articlePText={`2. Haus Schwarzenberg & Rosenhöfe  
+From multi-courtyard grandeur to compact and expressive, you'll find creativity pulsing through these spaces:  
+Haus Schwarzenberg is full of street art, galleries, and creative hangouts—a snapshot of Berlin's underground soul.  
+Rosenhöfe, tucked nearby, is the opposite vibe—serene and quietly enchanting, with soft architectural details and peaceful solitude.`}
 />
+
 <ArticleParagraph
-  articlePText=""
+  articlePText={`3. Schlüterhof at Humboldt Forum  
+Right at the cultural heart of Berlin, this Baroque courtyard offers architectural grandeur wrapped in quiet beauty. Think fountains, arcades, and virtues carved in stone—plus occasional summer open-air concerts and DJ sets for an atmospheric cultural twist.`}
+/>
+
+<ArticleParagraph
+  articlePText={`Creatives should explore these courtyards as they offer authentic vibes:  
+Each courtyard tells a story.  
+They are little pockets of calm: perfect for sketching, daydreaming, reading, or collab chats away from the tourist track.`}
 />
 
 <GapBig />
@@ -60,4 +62,3 @@ This iconic complex of eight interconnected courtyards in Mitte is a treasure tr
   cardHeadline2="This is an alluring headline for an article"
 />
 
-<GapBig />
