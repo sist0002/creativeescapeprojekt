@@ -1,0 +1,114 @@
+---
+import FeaturedUpcoming from "./FeaturedUpcoming.astro";
+import FeaturedSection from "./FeaturedSection.astro";
+import FeaturedSimple from "./FeaturedSimple.astro";
+import Footer from "./Footer.astro";
+import HausSchImg from "../assets/hausschwarzenberg_314x174.jpg";
+import DanceImg from "../assets/dancesmall.png";
+import FogImg from "../assets/fog-sculpture_314x174.jpg";
+import BoothImg from "../assets/boothsmall.png";
+
+/* Dummy data – nu sat til Berlin */
+const upcomingItems = [
+  {
+    title: "Happening in Berlin – September 2025",
+    href: "/berlin-september-2025",
+    imgSrc: "/assets/berlin-sept.jpg",
+    imgAlt: "Berlin event collage",
+    tags: ["BERLIN"],
+  },
+  {
+    title: "Street Art walk in Kreuzberg",
+    href: "/kreuzberg-street-art",
+    imgSrc: "/assets/kreuzberg-streetart.jpg",
+    imgAlt: "Kreuzberg street art",
+    tags: ["BERLIN"],
+  },
+  {
+    title: "Open-air cinema nights",
+    href: "/open-air-cinema",
+    imgSrc: "/assets/openair-cinema.jpg",
+    imgAlt: "Open air cinema",
+    tags: ["BERLIN"],
+  },
+];
+
+const freeBerlinItems = [
+  {
+    title: "Discover Berlin's charming dancing spots",
+    href: "/lets-dance-berlin",
+    imgSrc: DanceImg,
+    imgAlt: "People dancing",
+    tags: ["FREE", "BERLIN"],
+  },
+  {
+    title: "An immersive experience - Fujiko Nakaya's fog sculptures",
+    href: "/fog-sculptures-berlin",
+    imgSrc: FogImg,
+    imgAlt: "Fog sculpture",
+    tags: ["FREE", "BERLIN"],
+  },
+  {
+    title: "Capture these retro analogue photobooths",
+    href: "/analogue-photobooths",
+    imgSrc: BoothImg,
+    imgAlt: "Berlin photobooth",
+    tags: ["FREE", "BERLIN"],
+  },
+  {
+    title: "A little piece of street art paradise",
+    href: "/haus-schwarzenberg",
+    imgSrc: HausSchImg,
+    imgAlt: "Haus Schwarzenberg street art",
+    tags: ["FREE", "BERLIN"],
+  },
+];
+
+const notThisItems = [
+  {
+    title: "Not Potsdamer Platz... but Outdoor Courtyards",
+    href: "/outdoor-courtyards",
+    imgSrc: "/assets/placeholder2.jpg",
+    imgAlt: "Quiet courtyard",
+    tags: ["TIPS"],
+  },
+  {
+    title: "Not Checkpoint Charlie… but Kreuzberg Canals",
+    href: "/kreuzberg-canals",
+    imgSrc: "/assets/kreuzberg-canals.jpg",
+    imgAlt: "Kreuzberg canals",
+    tags: ["TIPS"],
+  },
+  {
+    title: "Not TV Tower… but Teufelsberg Views",
+    href: "/teufelsberg-views",
+    imgSrc: "/assets/teufelsberg.jpg",
+    imgAlt: "Teufelsberg",
+    tags: ["TIPS"],
+  },
+];
+---
+
+<!-- Sektion 1 -->
+<FeaturedUpcoming
+  eyebrow="FEATURED ARTICLES"
+  headline="UPCOMING"
+  items={upcomingItems}
+  bg="#d4552a"
+/>
+
+<!-- Sektion 2 -->
+<FeaturedSection
+  eyebrow="FEATURED ARTICLES"
+  headline="FREE ACTIVITIES IN BERLIN"
+  items={freeBerlinItems}
+  bg="#ffffff"
+  color="#111111"
+  cols={4}
+/>
+
+<!-- Sektion 3 -->
+<FeaturedSimple headline="NOT THIS → BUT THAT" items={notThisItems} bg="#6b4bbf" color="#ffffff" />
+
+<!-- Footer -->
+<Footer marqueeText="NEWSLETTER+++" bg="#000" color="#fff" />
