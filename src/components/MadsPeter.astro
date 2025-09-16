@@ -4,24 +4,34 @@ import FeaturedSection from "./FeaturedSection.astro";
 import FeaturedSimple from "./FeaturedSimple.astro";
 import Footer from "./Footer.astro";
 
-/* Dummy data (flyt evt. til /src/data/madsPeter.ts senere) */
+import byhavenImg from "../assets/Byhaven.jpg";
+import fog from "../assets/fog.jpg";
+
+/* Dummy data – nu sat til Copenhagen */
 const upcomingItems = [
-  { title: "Happening in Berlin – September 2025", href: "/haus-schwarzenberg", imgSrc: "/assets/hausschwarzenberg-banner.jpg", imgAlt: "Haus Schwarzenberg stairwell", tags: ["BERLIN"] },
-  { title: "Street Art walk in Copenhagen through the eyes of a digital designer", href: "/event-cph-street-art", imgSrc: "/assets/placeholder1.jpg", imgAlt: "Event in Copenhagen", tags: ["FREE","BERLIN"] },
-  { title: "Street Art walk in Berlin through the eyes of a digital designer", href: "/event-berlin-street-art", imgSrc: "/assets/placeholder2.jpg", imgAlt: "Event in Berlin", tags: ["BERLIN"] },
+  {
+    title: "Free concerts at fr vesterbro all september long",
+    href: "/byhaven",
+    imgSrc: byhavenImg,            // ← brug import-variablen
+    imgAlt: "Byhaven concerts",
+    tags: ["FREE"],
+  },
+  { title: "Let’s Dance!", href: "/lets-dance", imgSrc: "/assets/free-dance.jpg", imgAlt: "People dancing", tags: ["FREE"] },
+  { title: "Release party – Ekko Villa Kultur.", href: "/ekko-release", imgSrc: fog, imgAlt: "Fog sculpture", tags: ["FREE"] },
 ];
 
-const freeBerlinItems = [
-  { title: "Let’s Dance!", href: "/free-dance", imgSrc: "/assets/free-dance.jpg", imgAlt: "People dancing", tags: ["FREE","BERLIN"] },
-  { title: "An immersive experience – Fujiko Nakaya’s fog sculptures", href: "/fog-sculptures", imgSrc: "/assets/fog.jpg", imgAlt: "Fog sculpture", tags: ["FREE","BERLIN"] },
-  { title: "Analogue Photobooths of Berlin", href: "/photo-booths", imgSrc: "/assets/photobooth.jpg", imgAlt: "Photobooth", tags: ["FREE","BERLIN"] },
-  { title: "A must-see: Haus Schwarzenberg’s museum and street art", href: "/haus-schwarzenberg", imgSrc: "/assets/hs-card.jpg", imgAlt: "Street art", tags: ["FREE","BERLIN"] },
+
+const freeCphItems = [
+  { title: "K7-Week: Copenhagen’s budget friendly culture hack", href: "/k7week", imgSrc: "/assets/k7week.jpg", imgAlt: "K7 Week", tags: ["FREE","COPENHAGEN"] },
+  { title: "Free concerts at Byhaven vesterbro all september long.", href: "/byhaven", imgSrc: "/assets/byhaven.jpg", imgAlt: "Byhaven concerts", tags: ["FREE","COPENHAGEN"] },
+  { title: "Let’s Dance!", href: "/lets-dance", imgSrc: "/assets/free-dance.jpg", imgAlt: "People dancing", tags: ["FREE","COPENHAGEN"] },
+  { title: "Christianshavn Beboerhus", href: "/beboerhus", imgSrc: "/assets/beboerhus.jpg", imgAlt: "Christianshavn Beboerhus", tags: ["FREE","COPENHAGEN"] },
 ];
 
 const notThisItems = [
-  { title: "Potsdamer Platz > Outdoor courtyards (Milene)", href: "/potsdamer", imgSrc: "/assets/potsdamer.jpg", imgAlt: "Potsdamer Platz" },
-  { title: "Street Art walk in Copenhagen...", href: "/event-cph", imgSrc: "/assets/placeholder1.jpg", imgAlt: "Placeholder" },
-  { title: "Street Art walk in Copenhagen...", href: "/event-cph2", imgSrc: "/assets/placeholder2.jpg", imgAlt: "Placeholder" },
+  { title: "Not Strøget... But Nørrebro", href: "/norrebro", imgSrc: "/assets/norrebro.jpg", imgAlt: "Nørrebro" },
+  { title: "Not Nyhavn... but Christianshavn", href: "/christianshavn", imgSrc: "/assets/christianshavn.jpg", imgAlt: "Christianshavn" },
+  { title: "Not Espresso House... But Absalon", href: "/absalon", imgSrc: "/assets/placeholder2.jpg", imgAlt: "Absalon" },
 ];
 ---
 <!-- Sektion 1 -->
@@ -35,8 +45,8 @@ const notThisItems = [
 <!-- Sektion 2 -->
 <FeaturedSection
   eyebrow="FEATURED ARTICLES"
-  headline="FREE ACTIVITIES IN BERLIN"
-  items={freeBerlinItems}
+  headline="FREE ACTIVITIES IN COPENHAGEN"
+  items={freeCphItems}
   bg="#ffffff"
   color="#111111"
   cols={4}
@@ -44,9 +54,9 @@ const notThisItems = [
 
 <!-- Sektion 3 -->
 <FeaturedSimple
-  headline="NOT THIS --> BUT THAT"
+  headline="NOT THIS → BUT THAT"
   items={notThisItems}
-  bg="#6a4fc1"
+  bg="#2a5df5"
   color="#ffffff"
 />
 

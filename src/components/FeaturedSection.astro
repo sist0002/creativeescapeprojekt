@@ -1,11 +1,12 @@
 ---
 import SectionHeader from "./SectionHeader.astro";
 import CardGrid from "./CardGrid.astro";
+import type { ImageMetadata } from "astro";
 
-interface Item {
+export interface Item {
   title: string;
   href?: string;
-  imgSrc?: string;
+  imgSrc?: string | ImageMetadata; // ← nu både string og ImageMetadata
   imgAlt?: string;
   tags?: string[];
 }

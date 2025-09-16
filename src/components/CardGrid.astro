@@ -1,10 +1,11 @@
 ---
 import ArticleCard from "./ArticleCard.astro";
+import type { ImageMetadata } from "astro";
 
 type Item = {
   title: string;
   href?: string;
-  imgSrc?: string;
+  imgSrc?: string | ImageMetadata; // ← accepter begge typer
   imgAlt?: string;
   tags?: string[];
 };
@@ -15,9 +16,16 @@ interface Props {
 }
 
 const { items = [], cols = 3 }: Props = Astro.props;
+
+// Normaliser imgSrc til string (ArticleCard forventer string)
+type NormalizedItem = Omit<Item, "imgSrc"> & { imgSrc?: string };
+const normalizedItems: NormalizedItem[] = items.map((it) => ({
+  ...it,
+  imgSrc: typeof it.imgSrc === "string" ? it.imgSrc : it.imgSrc?.src,
+}));
 ---
 <div class="grid" style={`--cols:${cols}`}>
-  {items.map((it) => <ArticleCard {...it} />)}
+  {normalizedItems.map((it) => <ArticleCard {...it} />)}
 </div>
 
 <style>
