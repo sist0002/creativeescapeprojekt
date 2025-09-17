@@ -1,11 +1,7 @@
----
-const {articlePText} = Astro.props;
----
-
-<p>{articlePText}</p>
+<p class="p"><slot /></p>
 
 <style>
-  p {
+  .p {
     font-family: "PoppinsSemiBold", sans-serif;
     font-size: 14px;
     padding: 0 28%;

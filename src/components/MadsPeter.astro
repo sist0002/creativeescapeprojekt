@@ -6,30 +6,75 @@ import Footer from "./Footer.astro";
 
 import byhavenImg from "../assets/Byhaven.jpg";
 import fog from "../assets/fog.jpg";
+import freeDance from "../assets/free-dance.jpg";
+
+// nye imports til FREE-listen
+import k7weekImg from "../assets/k7week.jpg";
+import beboerhusImg from "../assets/beboerhussmall.png";
+
+import notnyhavnImg from "../assets/notnyhavnmedium.png";
+import nothavfrueImg from "../assets/nothavfrue.png";
+import absalonImg from "../assets/absalon.png";
+
 
 /* Dummy data – nu sat til Copenhagen */
 const upcomingItems = [
   {
     title: "Free concerts at fr vesterbro all september long",
-    href: "/byhaven",
-    imgSrc: byhavenImg,            // ← brug import-variablen
+    href: "/byhavenarticle",
+    imgSrc: byhavenImg,
     imgAlt: "Byhaven concerts",
     tags: ["FREE"],
   },
-  { title: "Let’s Dance!", href: "/lets-dance", imgSrc: "/assets/free-dance.jpg", imgAlt: "People dancing", tags: ["FREE"] },
-  { title: "Release party – Ekko Villa Kultur.", href: "/ekko-release", imgSrc: fog, imgAlt: "Fog sculpture", tags: ["FREE"] },
+  {
+    title: "Let’s Dance!",
+    href: "/lets-dance",
+    imgSrc: freeDance,
+    imgAlt: "People dancing",
+    tags: ["FREE"],
+  },
+  {
+    title: "Release party – Ekko Villa Kultur.",
+    href: "/ekko-release",
+    imgSrc: fog,
+    imgAlt: "Fog sculpture",
+    tags: ["FREE"],
+  },
 ];
 
-
 const freeCphItems = [
-  { title: "K7-Week: Copenhagen’s budget friendly culture hack", href: "/k7week", imgSrc: "/assets/k7week.jpg", imgAlt: "K7 Week", tags: ["FREE","COPENHAGEN"] },
-  { title: "Free concerts at Byhaven vesterbro all september long.", href: "/byhaven", imgSrc: "/assets/byhaven.jpg", imgAlt: "Byhaven concerts", tags: ["FREE","COPENHAGEN"] },
-  { title: "Let’s Dance!", href: "/lets-dance", imgSrc: "/assets/free-dance.jpg", imgAlt: "People dancing", tags: ["FREE","COPENHAGEN"] },
-  { title: "Christianshavn Beboerhus", href: "/beboerhus", imgSrc: "/assets/beboerhus.jpg", imgAlt: "Christianshavn Beboerhus", tags: ["FREE","COPENHAGEN"] },
+  {
+    title: "K7-Week: Copenhagen’s budget friendly culture hack",
+    href: "/k7week",
+    imgSrc: k7weekImg,
+    imgAlt: "K7 Week",
+    tags: ["FREE", "COPENHAGEN"],
+  },
+  {
+    title: "Free concerts at Byhaven vesterbro all september long.",
+    href: "/byhavenarticle",
+    imgSrc: byhavenImg, // samme billede som ovenfor
+    imgAlt: "Byhaven concerts",
+    tags: ["FREE", "COPENHAGEN"],
+  },
+  {
+    title: "Let’s Dance!",
+    href: "/lets-dance",
+    imgSrc: freeDance, // samme billede som ovenfor
+    imgAlt: "People dancing",
+    tags: ["FREE", "COPENHAGEN"],
+  },
+  {
+    title: "Christianshavn Beboerhus",
+    href: "/beboerhus",
+    imgSrc: beboerhusImg,
+    imgAlt: "Christianshavn Beboerhus",
+    tags: ["FREE", "COPENHAGEN"],
+  },
 ];
 
 const notThisItems = [
-  { title: "Not The Little Mermaid... But Havfruen", href: "/havfrue", imgSrc: "../assets/", imgAlt: "Nørrebro" },
+  { title: "Not Strøget... But Nørrebro", href: "/norrebro", imgSrc: "/assets/norrebro.jpg", imgAlt: "Nørrebro" },
   { title: "Not Nyhavn... but Christianshavn", href: "/christianshavn", imgSrc: "/assets/christianshavn.jpg", imgAlt: "Christianshavn" },
   { title: "Not Espresso House... But Absalon", href: "/absalon", imgSrc: "/assets/placeholder2.jpg", imgAlt: "Absalon" },
 ];
