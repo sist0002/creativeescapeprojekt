@@ -1,5 +1,6 @@
 ---
 import Tag from "./Tag.astro";
+import Image from "astro/components/Image.astro";
 /* Props
 - title: kortets titel
 - href: link til fuld artikel/side
@@ -11,7 +12,7 @@ const { title, href = "#", imgSrc = "", imgAlt = title, tags = [] } = Astro.prop
 <a class="card" href={href}>
 <div class="imgwrap">
 {imgSrc ? (
-<img src={imgSrc} alt={imgAlt} loading="lazy" />
+<Image src={imgSrc} alt={imgAlt} loading="lazy" />
 ) : (
 <div class="placeholder" aria-hidden="true">Img</div>
 )}
