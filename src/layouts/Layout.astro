@@ -70,10 +70,15 @@
     font-display: swap;
   }
 
-  html,
+  html {
+    background-color: #000000;
+  }
+
   body {
     margin: 0;
-    width: 100%;
+    background-color: #ffffff;
     height: 100%;
+    margin: 0 auto; /* centrerer body så man på meget brede skærme vil se sorte margins på hver side af body */
+    max-width: 1680px; /* begrænser body-størrelsen til vores største billedes bredde */
   }
 </style>
