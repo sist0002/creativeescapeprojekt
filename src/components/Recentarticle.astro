@@ -1,12 +1,12 @@
 ---
 import { Image } from "astro:assets";
-import Landingimage from "../assets/photobooth.png";
+const { RecentArticleHeader, RecentArticleImage, RecentArticleImageAlt } = Astro.props;
 ---
 
 <section class="grid_1-3">
-  <Image class="landingimg" src={Landingimage} alt="Photobooth in Berlin" />
+  <Image class="landingimg" src={RecentArticleImage} alt={RecentArticleImageAlt} />
   <div class="recentarticle_flex">
-    <p class="recent_header">What is K7 Week?</p>
+    <p class="recent_header">{RecentArticleHeader}</p>
     <p class="recent_date">10/9-2025</p>
   </div>
 </section>
@@ -35,8 +35,8 @@ import Landingimage from "../assets/photobooth.png";
     font-size: 11px;
   }
   .recent_header {
-    margin-top: 10px;
     font-size: 15px;
+    font-family: "PoppinsMedium", sans-serif;
   }
   hr {
     border: 0.5px solid #bcbcbc;

@@ -1,0 +1,41 @@
+---
+import Landingarticle from "../components/Landingarticle.astro";
+import Landingrecentsection from "../components/Landingrecentsection.astro";
+import Booth from "../assets/booth1.png";
+import Cc from "../assets/cc.png";
+import K7week from "../assets/k7week.png";
+import Fog from "../assets/fog.jpg";
+import Byhaven from "../assets/Byhaven.jpg";
+---
+
+<section>
+  <Landingarticle class="griditem" LandingArticleImage={Booth} LandingArticleImageAlt="Copenhagen Contemporary" landingHeader="AN IMAGE WORTH CAPTURING: BERLIN'S ANALOGUE PHOTO BOOTHS" />
+  <Landingrecentsection
+    class="griditem"
+    RecentArticleHeader1="Must see: Soft Robots // Copenhagen Contemporary"
+    RecentArticleImage1={Cc}
+    RecentArticleImageAlt1="Copenhagen Contemporary"
+    RecentArticleHeader2="K7 Week: Copenhagen's budget friendly culture hack"
+    RecentArticleImage2={K7week}
+    RecentArticleImageAlt2="K7week"
+    RecentArticleHeader3="Release party: Ekko Villa Kultur"
+    RecentArticleImage3={Fog}
+    RecentArticleImageAlt3="K7week"
+    RecentArticleHeader4="Free concerts at Byhaven all september"
+    RecentArticleImage4={Byhaven}
+    RecentArticleImageAlt4="K7week"
+  />
+</section>
+
+<style>
+  section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    margin: 50px 200px 50px 100px;
+  }
+  .griditem {
+    background-color: blueviolet;
+    height: 70vh;
+  }
+</style>
