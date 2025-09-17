@@ -1,11 +1,11 @@
 ---
 import { Image } from "astro:assets";
-import Landingimage from "../assets/photobooth.png";
+const { LandingArticleImage, LandingArticleImageAlt, landingHeader } = Astro.props;
 ---
 
 <div>
-  <Image class="landingimg" src={Landingimage} alt="Photobooth in Berlin" />
-  <h1>AN IMAGE WORTH CAPTURING: BERLIN'S ANALOGUE PHOTO BOOTHS</h1>
+  <Image class="landingimg" src={LandingArticleImage} alt={LandingArticleImageAlt} />
+  <h1>{landingHeader}</h1>
 </div>
 <style>
   div {
@@ -13,12 +13,13 @@ import Landingimage from "../assets/photobooth.png";
       text-align: center;
       padding: 0 150px 0 150px;
       font-size: 40px;
-      font-family: sans-serif;
+      font-family: "PoppinsBold", sans-serif;
     }
   }
   .landingimg {
     margin: auto;
     display: block;
     width: 750px;
+    height: auto;
   }
 </style>

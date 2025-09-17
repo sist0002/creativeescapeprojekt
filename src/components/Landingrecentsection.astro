@@ -1,5 +1,8 @@
 ---
 import Recentarticle from "./Recentarticle.astro";
+const { RecentArticleHeader1, RecentArticleHeader2, RecentArticleHeader3, RecentArticleHeader4 } = Astro.props;
+const { RecentArticleImage1, RecentArticleImage2, RecentArticleImage3, RecentArticleImage4 } = Astro.props;
+const { RecentArticleImageAlt1, RecentArticleImageAlt2, RecentArticleImageAlt3, RecentArticleImageAlt4 } = Astro.props;
 ---
 
 <div>
@@ -9,10 +12,10 @@ import Recentarticle from "./Recentarticle.astro";
     <h2>RECENT ARTICLES</h2>
   </div>
   <section class="articlesection">
-    <Recentarticle />
-    <Recentarticle />
-    <Recentarticle />
-    <Recentarticle />
+    <Recentarticle RecentArticleHeader={RecentArticleHeader1} RecentArticleImage={RecentArticleImage1} RecentArticleImageAlt={RecentArticleImageAlt1} />
+    <Recentarticle RecentArticleHeader={RecentArticleHeader2} RecentArticleImage={RecentArticleImage2} RecentArticleImageAlt={RecentArticleImageAlt2} />
+    <Recentarticle RecentArticleHeader={RecentArticleHeader3} RecentArticleImage={RecentArticleImage3} RecentArticleImageAlt={RecentArticleImageAlt3} />
+    <Recentarticle RecentArticleHeader={RecentArticleHeader4} RecentArticleImage={RecentArticleImage4} RecentArticleImageAlt={RecentArticleImageAlt4} />
   </section>
 </div>
 
