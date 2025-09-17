@@ -4,7 +4,7 @@ import ArticleH2 from "./ArticleH2.astro";
 import ArticleH3 from "./ArticleH3.astro";
 import ArticleParagraph from "./ArticleParagraph.astro";
 import ArticleBanner from "./ArticleBanner.astro";
-import HSbanner from "../assets/dance1.png";
+import HSbanner from "../assets/dancekbh.png";
 import ArticleImage from "./ArticleImage.astro";
 import HSimage from "../assets/dance2.png";
 import Gap from "./Gap.astro";
@@ -12,12 +12,12 @@ import GapBig from "./GapBig.astro";
 import TwoCardsMenu from "./TwoCardsMenu.astro";
 import PlaceholderImg1 from "../assets/placeholderimg1.png";
 import PlaceholderImg2 from "../assets/placeholderimg1.png";
+import ArticleLink from "./ArticleLink.astro";
 ---
 
 <ArticleH1 articleH1Text="Free Dance in copenhagen" />
 
-<ArticleH2
-  articleH2Text="Free dance events in Copenhagen, from outdoor summer dance to indoor tango (all year long)."
+<ArticleH2 articleH2Text="Be sure not to miss out on the free dance events in Copenhagen, from Outdoor ummer dance to indoor tango - all year long."
 />
 
 <ArticleBanner bannerImage={HSbanner} imageAltText="Haus Schwarzenberg banner" />
@@ -31,7 +31,11 @@ import PlaceholderImg2 from "../assets/placeholderimg1.png";
 />
 
 <ArticleParagraph
-  articlePText={`Skip the tourist traps and head to Fælledparken, where Dansepladsen offers free outdoor dance all summer long. You'll find teaser classes followed by social dancing—so grab a partner, and let the rhythms of salsa, West African, Brazilian samba, tango, and more, move you. It's relaxed, creative, and perfect for Young Creatives like you. https://www.sommerdans.dk/program/`}
+  articlePText={`Skip the tourist traps and head to Fælledparken, where Dansepladsen offers free outdoor dance all summer long. You'll find teaser classes followed by social dancing—so grab a partner, and let the rhythms of salsa, West African, Brazilian samba, tango, and more, move you. It's relaxed, creative, and perfect for Young Creatives like you.`}
+/>
+
+<ArticleLink 
+linkUrl = "https://www.sommerdans.dk/program/" linkText ="Click here for more info"
 />
 
 <Gap />
@@ -46,6 +50,9 @@ import PlaceholderImg2 from "../assets/placeholderimg1.png";
 />
 <ArticleParagraph
   articlePText={`This happens at lysthuset near islands brygges culture house. Very inclusive and welcoming atmosphere! The dance workshop is from 8-9:30 and is folllowed by social dance from 9:30-10:45. Social dance a great opportunity to practice your new steps and get to know the others in the community.`}
+/>
+<ArticleLink 
+linkUrl = "https://www.tangospirer.dk/" linkText ="Click here for more info"
 />
 
 <GapBig />
