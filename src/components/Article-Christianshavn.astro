@@ -2,7 +2,7 @@
 import ArticleH1 from "./ArticleH1.astro";
 import ArticleH2 from "./ArticleH2.astro";
 import ArticleH3 from "./ArticleH3.astro";
-import ArticleParagraph from "./ArticleParagraph.astro";
+import ArticleP from "./ArticleP.astro";
 import ArticleBanner from "./ArticleBanner.astro";
 import Nyhavnbanner from "../assets/nyhavn.png";
 import GapBig from "./GapBig.astro";
@@ -19,22 +19,25 @@ import PlaceholderImg2 from "../assets/placeholderimg1.png";
 
 <ArticleBanner bannerImage={Nyhavnbanner} imageAltText="Christianshavns Beboerhus entrance" />
 
-<ArticleH3 articleH3Text=<ArticleH3 articleH3Text={`silky canals, local cafes, charming strolls,  this neighborhood is a charismatic alternative to nyhavn`} />
+<ArticleH3
+  articleH3Text="<ArticleH3"
+  articleH3Text={`silky canals, local cafes, charming strolls,  this neighborhood is a charismatic alternative to nyhavn`}
+/>
 />
 
-<ArticleParagraph
+<ArticleP
   articlePText={` Sure, Nyhavn looks great on a postcard — but let's be real: it's where every tourist goes. Packed cafés, overpriced drinks, and selfie sticks everywhere. If you want to experience Copenhagen in a more local way, skip Nyhavn and head over to Christianshavn instead.`}
 />
 
-<ArticleParagraph
+<ArticleP
   articlePText={`You'll still get the canals, the colorful old houses, and boats lined up along the water, but without the overwhelming crowds. Christianshavn has a calmer, laid-back vibe that feels like a mix between city and small town — perfect for a relaxed walk, grabbing a coffee to-go, or just sitting by the water and watching life float by.`}
 />
 
-<ArticleParagraph
+<ArticleP
   articlePText={`Find a spot along the canal on a sunny afternoon. That's where you'll really feel the atmosphere — authentic Copenhagen, minus the clichés.`}
 />
 
-<ArticleParagraph
+<ArticleP
   articlePText={`In Christianshavn, you'll find the neighborhood Christiania, an independent town tucked away from the corporate world. Also known as  “Freetown”, this village was founded in the 60’s and still remains an independent village. You'll find colorful hand-built houses, independent cafes, restaurant, venues, a local sauna etc.`}
 />
 <GapBig />

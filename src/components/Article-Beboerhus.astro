@@ -2,7 +2,7 @@
 import ArticleH1 from "./ArticleH1.astro";
 import ArticleH2 from "./ArticleH2.astro";
 import ArticleH3 from "./ArticleH3.astro";
-import ArticleParagraph from "./ArticleParagraph.astro";
+import ArticleP from "./ArticleP.astro";
 import ArticleBanner from "./ArticleBanner.astro";
 import Beboerhusbanner from "../assets/beboerhusweb1.png";
 import GapBig from "./GapBig.astro";
@@ -19,43 +19,41 @@ import PlaceholderImg2 from "../assets/placeholderimg1.png";
 
 <ArticleBanner bannerImage={Beboerhusbanner} imageAltText="Christianshavns Beboerhus entrance" />
 
-<ArticleH3 articleH3Text=<ArticleH3 articleH3Text={`MISSING A PLACE TO SIT AND READ? WORK? or MAYBE to WATCH A FILM? 
-THIS PLACE HAS IT ALL!`} />
+<ArticleH3
+  articleH3Text="<ArticleH3"
+  articleH3Text={`MISSING A PLACE TO SIT AND READ? WORK? or MAYBE to WATCH A FILM? 
+THIS PLACE HAS IT ALL!`}
+/>
 />
 
-<ArticleParagraph
+<ArticleP
   articlePText={` Your Cozy Creative Hub in Christianshavn
 If you're on the hunt for a surprise creative hangout where you can drop in, have a free cuppa, and soak in a vibrant DIY atmosphere—Christianshavns Beboerhus is a go-to spot. This place is the living room of the hood: A comfy space with occasional concerts, readings, and art displays—plus a little stage for creative moments `}
 />
 
-<ArticleParagraph
+<ArticleP
   articlePText={`Free herbal tea: Pop by, chill in retro sofas, read the paper—no purchase required.`}
 />
-  
-  <ArticleH3 articleH3Text="What makes it special?" />
-  
 
-<ArticleParagraph
-  articlePText={`Django Jam: Last Tuesday every month—free swing/jazz jam in the café`} 
-/>
+<ArticleH3 articleH3Text="What makes it special?" />
 
-<ArticleParagraph
-  articlePText={`Film Club: Almost every Thursday—free screenings in a cozy mini cinema`}
-/>
-<ArticleParagraph
+<ArticleP articlePText={`Django Jam: Last Tuesday every month—free swing/jazz jam in the café`} />
+
+<ArticleP articlePText={`Film Club: Almost every Thursday—free screenings in a cozy mini cinema`} />
+<ArticleP
   articlePText={`Music Club: Bring a track, share it, chat about music—every first Monday of the month`}
 />
-<ArticleParagraph
+<ArticleP
   articlePText={`Book Club (“Bogklubbens øjne”): Last Monday each month—just show up for casual reading and talk`}
 />
-<ArticleParagraph
+<ArticleP
   articlePText={`Sketchy Monday: Weekly creative hangout with free craft supplies—
 Krea Plus: Monthly open workshop session—bring your project, meet others Christianshavns Beboerhus.`}
 />
-<ArticleParagraph
+<ArticleP
   articlePText={`Byttemarked: Annual swap market—trade clothes, homeware, fun finds, all for free`}
 />
-<ArticleParagraph
+<ArticleP
   articlePText={`So hurry on and make yourself at home in this urban living room. Get free tea, drop in for concerts, film club, sketchy Mondays, or just to read the paper like it’s 1975.`}
 />
 
