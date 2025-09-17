@@ -1,0 +1,77 @@
+---
+import ArticleH1 from "./ArticleH1.astro";
+import ArticleH2 from "./ArticleH2.astro";
+import ArticleH3 from "./ArticleH3.astro";
+import ArticleParagraph from "./ArticleParagraph.astro";
+import ArticleBanner from "./ArticleBanner.astro";
+import byhavenImg from "../assets/Byhaven.jpg";
+import GapBig from "./GapBig.astro";
+---
+
+<ArticleH1 articleH1Text="FREE CONCERTS AT BYHAVEN – ALL SUMMER LONG" />
+
+<ArticleH2 articleH2Text="Vesterbro’s backyard stage for upcoming artists" />
+
+<ArticleBanner bannerImage={byhavenImg} imageAltText="Byhaven concerts" />
+
+<ArticleH3 articleH3Text="Why Byhaven is more than just another venue" />
+
+<ArticleParagraph>
+  Byhaven, located right next to Vesterport, has become one of Copenhagen’s most talked-about
+  summer hangouts. All season long – including September – the courtyard turns into an open-air
+  stage with free concerts almost every week.
+</ArticleParagraph>
+
+<ArticleParagraph>
+  For many young Copenhageners, it’s the perfect mix: discovering upcoming artists, hanging out
+  with friends, and soaking in the atmosphere without paying a single krone.
+</ArticleParagraph>
+
+<ArticleH3 articleH3Text="A local voice on the Byhaven vibe" />
+
+<ArticleParagraph>
+  We asked a young Copenhagen resident what makes Byhaven special. His take:  
+  "Honestly, I love following their Instagram – it feels fresh and professional. And the fact that
+  they host free concerts all summer is just amazing. It’s one of the few places where you can
+  still stumble upon new music without needing a ticket."
+</ArticleParagraph>
+
+<ArticleParagraph>
+  You can catch his thoughts here:
+</ArticleParagraph>
+
+<div class="video-wrapper">
+  <iframe
+    src="https://www.youtube.com/embed/A7r3NEYrkdI"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+</div>
+
+<ArticleParagraph>
+  So whether you’re into indie, electronic, or just want to feel the pulse of the city, Byhaven is
+  where Copenhagen shows its creative, unpolished side.
+</ArticleParagraph>
+
+<GapBig />
+
+<style>
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 format */
+    height: 0;
+    overflow: hidden;
+    margin: 24px auto;
+    max-width: 800px;
+  }
+
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
