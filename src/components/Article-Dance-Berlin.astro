@@ -2,7 +2,7 @@
 import ArticleH1 from "./ArticleH1.astro";
 import ArticleH2 from "./ArticleH2.astro";
 import ArticleH3 from "./ArticleH3.astro";
-import ArticleParagraph from "./ArticleParagraph.astro";
+import ArticleP from "./ArticleP.astro";
 import ArticleBanner from "./ArticleBanner.astro";
 import DanceBanner from "../assets/danceberlin.png";
 import ArticleImage from "./ArticleImage.astro";
@@ -25,28 +25,29 @@ import ArticleLink from "./ArticleLink.astro";
 
 <ArticleH3 articleH3Text="Discover  berlin's outdoor dance spots" />
 
-<ArticleParagraph
+<ArticleP
   articlePText={`Why just see the city when you can dance through it? Berlin's outdoor dance scene turns sightseeing into a full-body experience. From swing to salsa, tango to waltz, you'll find dancers gathering by the Spree and in leafy parks all summer long. And the best part? Many of these events are free.`}
 />
 
-<ArticleParagraph
+<ArticleP
   articlePText={`Monbijoupark - Dance Under the Stars
 Right by the Bode Museum, Monbijoupark transforms into one of Berlin's most magical open-air dance floors. The park's beach bar hosts daily sessions with everything from swing and waltz to salsa and tango.`}
 />
-<ArticleLink 
-linkUrl = "https://www.visitberlin.de/en/event/dance-monbijou-park" linkText ="Click here for more info"
+<ArticleLink
+  linkUrl="https://www.visitberlin.de/en/event/dance-monbijou-park"
+  linkText="Click here for more info"
 />
-
 
 <Gap />
 
-<ArticleParagraph
-articlePText={`Paul-Löbe-Haus - Tango by the River
+<ArticleP
+  articlePText={`Paul-Löbe-Haus - Tango by the River
 Just across from the Reichstag, dancers gather almost every evening in summer to practice tango in front of Paul-Löbe-Haus. It's relaxed, social, and free—perfect whether you're a beginner looking to pick up your first steps or someone already hooked on tango's rhythm.`}
 />
 <ArticleLink
-linkUrl = "https://www.visitberlin.de/en/event/open-air-tango-paul-lobe-house"  linkText = "Click here for more info"  />
-
+  linkUrl="https://www.visitberlin.de/en/event/open-air-tango-paul-lobe-house"
+  linkText="Click here for more info"
+/>
 
 <GapBig />
 

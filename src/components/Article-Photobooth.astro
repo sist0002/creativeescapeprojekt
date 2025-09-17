@@ -2,7 +2,7 @@
 import ArticleH1 from "./ArticleH1.astro";
 import ArticleH2 from "./ArticleH2.astro";
 import ArticleH3 from "./ArticleH3.astro";
-import ArticleParagraph from "./ArticleParagraph.astro";
+import ArticleP from "./ArticleP.astro";
 import ArticleBanner from "./ArticleBanner.astro";
 import HSbanner from "../assets/boothweb1.png";
 import ArticleImage from "./ArticleImage.astro";
@@ -22,13 +22,15 @@ import PlaceholderImg2 from "../assets/placeholderimg1.png";
 
 <ArticleBanner bannerImage={HSbanner} imageAltText="booth 1" />
 
-<ArticleH3 articleH3Text="these little capsules lay scattered across the city, imprinting us in their raw touch" />
+<ArticleH3
+  articleH3Text="these little capsules lay scattered across the city, imprinting us in their raw touch"
+/>
 
-<ArticleParagraph
+<ArticleP
   articlePText={`In Berlin, analogue photobooths aren't just machines—they're part of the city's street culture. Scattered across Kreuzberg and Friedrichshain, these booths catch friendships, nights out, and random moments in grainy black-and-white strips you can hold in your hand. The wait, the flash, the chemical smell—it's all part of the ritual.`}
 />
 
-<ArticleParagraph
+<ArticleP
   articlePText={`Today, the walls are layered with stories told in paint and paste-ups, 
   mixing political commentary and sharp urban wit. The alley and surrounding buildings are
   not polished or curated for visitors - they're messy, powerful, and beautifully real. 
@@ -42,18 +44,18 @@ import PlaceholderImg2 from "../assets/placeholderimg1.png";
 
 <ArticleH3 articleH3Text="Here are a few worth seeking out" />
 
-<ArticleParagraph
+<ArticleP
   articlePText={`Schlesisches Tor — Kreuzberg - Beneath the U-Bahn tracks. This booth hums with the rhythm of Kreuzberg. The grainy strips feel cinematic, like stills pulled from a Berlin indie film.`}
 />
-<ArticleParagraph
+<ArticleP
   articlePText={`RAW 2 — Revaler Str. 99, 10245 Berlin. - Set against graffiti walls and industrial textures, this booth spits out high-contrast photos that echo the grit of its surroundings.`}
 />
-<ArticleParagraph
+<ArticleP
   articlePText={`Warschauer Brücke 1 — 10243 Berlin -
 On the edge of the bridge, with trains rushing past, this booth feels restless and alive. The prints come out bright, sometimes overexposed — as if the city lights have burned themselves into the film.`}
 />
 
-<ArticleParagraph
+<ArticleP
   articlePText={`RAW 1 — 10245 Berlin -
 This booth sits quietly in the middle of Berlin's chaos, collecting stories from strangers. Its photos have a softer focus, like memories already halfway to nostalgia.`}
 />
