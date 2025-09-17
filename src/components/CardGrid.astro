@@ -5,27 +5,20 @@ import type { ImageMetadata } from "astro";
 type Item = {
   title: string;
   href?: string;
-  imgSrc?: string | ImageMetadata; // ← accepter begge typer
+  imgSrc?: string | ImageMetadata; // ← union
   imgAlt?: string;
   tags?: string[];
 };
 
 interface Props {
   items: Item[];
-  cols?: number; // antal kolonner på desktop
+  cols?: number;
 }
 
 const { items = [], cols = 3 }: Props = Astro.props;
-
-// Normaliser imgSrc til string (ArticleCard forventer string)
-type NormalizedItem = Omit<Item, "imgSrc"> & { imgSrc?: string };
-const normalizedItems: NormalizedItem[] = items.map((it) => ({
-  ...it,
-  imgSrc: typeof it.imgSrc === "string" ? it.imgSrc : it.imgSrc?.src,
-}));
 ---
 <div class="grid" style={`--cols:${cols}`}>
-  {normalizedItems.map((it) => <ArticleCard {...it} />)}
+  {items.map((it) => <ArticleCard {...it} />)}
 </div>
 
 <style>
@@ -34,12 +27,12 @@ const normalizedItems: NormalizedItem[] = items.map((it) => ({
     margin: 24px auto 0;
     display: grid;
     gap: 28px;
-    grid-template-columns: 1fr;            /* mobil */
+    grid-template-columns: 1fr;
   }
   @media (min-width: 700px) {
-    .grid { grid-template-columns: repeat(2, 1fr); }  /* tablet */
+    .grid { grid-template-columns: repeat(2, 1fr); }
   }
   @media (min-width: 1024px) {
-    .grid { grid-template-columns: repeat(var(--cols), 1fr); } /* desktop */
+    .grid { grid-template-columns: repeat(var(--cols), 1fr); }
   }
 </style>

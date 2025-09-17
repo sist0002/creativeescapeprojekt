@@ -3,31 +3,42 @@ import FeaturedUpcoming from "./FeaturedUpcoming.astro";
 import FeaturedSection from "./FeaturedSection.astro";
 import FeaturedSimple from "./FeaturedSimple.astro";
 import Footer from "./Footer.astro";
+
+// FREE-listen
 import HausSchImg from "../assets/hausschwarzenberg_314x174.jpg";
 import DanceImg from "../assets/dancesmall.png";
 import FogImg from "../assets/fog-sculpture_314x174.jpg";
 import BoothImg from "../assets/boothsmall.png";
 
-/* Dummy data – nu sat til Berlin */
+// UPCOMING 
+import BerlinSeptImg from "../assets/photobooth.png";
+import KreuzbergStreetArtImg from "../assets/photobooth.png";
+import OpenAirCinemaImg from "../assets/photobooth.png";
+
+// NOT THIS 
+import Placeholder2Img from "../assets/sommerdansweb.png";
+import KreuzbergCanalsImg from "../assets/booth2.png";
+import Courtyard from "../assets/courtyard1.png";
+
 const upcomingItems = [
   {
     title: "Happening in Berlin – September 2025",
     href: "/berlin-september-2025",
-    imgSrc: "/assets/berlin-sept.jpg",
+    imgSrc: BerlinSeptImg,
     imgAlt: "Berlin event collage",
     tags: ["BERLIN"],
   },
   {
     title: "Street Art walk in Kreuzberg",
     href: "/kreuzberg-street-art",
-    imgSrc: "/assets/kreuzberg-streetart.jpg",
+    imgSrc: KreuzbergStreetArtImg,
     imgAlt: "Kreuzberg street art",
     tags: ["BERLIN"],
   },
   {
     title: "Open-air cinema nights",
     href: "/open-air-cinema",
-    imgSrc: "/assets/openair-cinema.jpg",
+    imgSrc: OpenAirCinemaImg,
     imgAlt: "Open air cinema",
     tags: ["BERLIN"],
   },
@@ -68,27 +79,26 @@ const notThisItems = [
   {
     title: "Not Potsdamer Platz... but Outdoor Courtyards",
     href: "/outdoor-courtyards",
-    imgSrc: "/assets/placeholder2.jpg",
+    imgSrc: Placeholder2Img,
     imgAlt: "Quiet courtyard",
     tags: ["TIPS"],
   },
   {
     title: "Not Checkpoint Charlie… but Kreuzberg Canals",
     href: "/kreuzberg-canals",
-    imgSrc: "/assets/kreuzberg-canals.jpg",
+    imgSrc: KreuzbergCanalsImg,
     imgAlt: "Kreuzberg canals",
     tags: ["TIPS"],
   },
   {
     title: "Not TV Tower… but Teufelsberg Views",
     href: "/teufelsberg-views",
-    imgSrc: "/assets/teufelsberg.jpg",
+    imgSrc: Courtyard,
     imgAlt: "Teufelsberg",
     tags: ["TIPS"],
   },
 ];
 ---
-
 <!-- Sektion 1 -->
 <FeaturedUpcoming
   eyebrow="FEATURED ARTICLES"
@@ -108,7 +118,12 @@ const notThisItems = [
 />
 
 <!-- Sektion 3 -->
-<FeaturedSimple headline="NOT THIS → BUT THAT" items={notThisItems} bg="#6b4bbf" color="#ffffff" />
+<FeaturedSimple
+  headline="NOT THIS → BUT THAT"
+  items={notThisItems}
+  bg="#2a5df5"
+  color="#ffffff"
+/>
 
 <!-- Footer -->
 <Footer marqueeText="NEWSLETTER+++" bg="#000" color="#fff" />
