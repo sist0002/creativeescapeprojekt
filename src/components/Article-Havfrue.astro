@@ -1,31 +1,22 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
-import BerlinLogo from "../components/BerlinLogo.astro";
 import ArticleH1 from "./ArticleH1.astro";
 import ArticleH2 from "./ArticleH2.astro";
 import ArticleH3 from "./ArticleH3.astro";
 import ArticleParagraph from "./ArticleParagraph.astro";
 import ArticleBanner from "./ArticleBanner.astro";
-import HSbanner from "../assets/havfrue.png";
-import Gap from "./Gap.astro";
+import Havfruebanner from "../assets/havfrue.png";
 import GapBig from "./GapBig.astro";
 import TwoCardsMenu from "./TwoCardsMenu.astro";
 import PlaceholderImg1 from "../assets/placeholderimg1.png";
 import PlaceholderImg2 from "../assets/placeholderimg1.png";
 ---
-
-<Layout>
-  <Header />
-  <BerlinLogo />
-
-  <ArticleH1 articleH1Text="NOT THE LITTLE MERMAID... BUT HAVFRUEN" />
+<ArticleH1 articleH1Text="NOT THE LITTLE MERMAID... BUT HAVFRUEN" />
 
   <ArticleH2
     articleH2Text="Forget the Little Mermaid — Discover Havfrue by the Black Diamond"
   />
 
-  <ArticleBanner bannerImage={HSbanner} imageAltText="Havfrue Billede" />
+  <ArticleBanner bannerImage={Havfruebanner} imageAltText="Havfrue Billede" />
 
   <ArticleH3 articleH3Text="A different kind of mermaid: raw, expressive, and hidden in plain sight" />
 
@@ -62,13 +53,3 @@ Standing by the water, Havfrue reflects Copenhagen's creative identity: bold, un
   />
 
   <GapBig />
-</Layout>
-
-<style>
-  html,
-  body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-  }
-</style>
