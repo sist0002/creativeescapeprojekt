@@ -7,13 +7,14 @@ import HausSchImg from "../assets/hausschwarzenberg_314x174.jpg";
 import DanceImg from "../assets/dancesmall.png";
 import FogImg from "../assets/fog-sculpture_314x174.jpg";
 import BoothImg from "../assets/boothsmall.png";
+import SeptImg from "/assets/berlin-sept.jpg";
 
 /* Dummy data – nu sat til Berlin */
 const upcomingItems = [
   {
     title: "Happening in Berlin – September 2025",
     href: "/berlin-september-2025",
-    imgSrc: "/assets/berlin-sept.jpg",
+    imgSrc: SeptImg,
     imgAlt: "Berlin event collage",
     tags: ["BERLIN"],
   },
@@ -90,22 +91,10 @@ const notThisItems = [
 ---
 
 <!-- Sektion 1 -->
-<FeaturedUpcoming
-  eyebrow="FEATURED ARTICLES"
-  headline="UPCOMING"
-  items={upcomingItems}
-  bg="#d4552a"
-/>
+<FeaturedUpcoming eyebrow="FEATURED ARTICLES" headline="UPCOMING" items={upcomingItems} bg="#d4552a" />
 
 <!-- Sektion 2 -->
-<FeaturedSection
-  eyebrow="FEATURED ARTICLES"
-  headline="FREE ACTIVITIES IN BERLIN"
-  items={freeBerlinItems}
-  bg="#ffffff"
-  color="#111111"
-  cols={4}
-/>
+<FeaturedSection eyebrow="FEATURED ARTICLES" headline="FREE ACTIVITIES IN BERLIN" items={freeBerlinItems} bg="#ffffff" color="#111111" cols={4} />
 
 <!-- Sektion 3 -->
 <FeaturedSimple headline="NOT THIS → BUT THAT" items={notThisItems} bg="#6b4bbf" color="#ffffff" />
